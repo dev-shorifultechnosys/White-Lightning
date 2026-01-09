@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        whiskey: {
+                            50: '#fdf8f3',
+                            100: '#f9ede0',
+                            200: '#f3d9bf',
+                            300: '#eabe93',
+                            400: '#df9a65',
+                            500: '#d67e45',
+                            600: '#c8663a',
+                            700: '#a74f32',
+                            800: '#86402f',
+                            900: '#6d3629',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        html { scroll-behavior: smooth; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+    </style>
+</head>
+<body class="font-body bg-neutral-50">
+
+<div id="announcement-bar" class="bg-gradient-to-r from-whiskey-900 via-whiskey-800 to-whiskey-900 text-white py-3 px-4 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+    <div class="relative z-10 flex items-center justify-center">
+        <i class="fa-solid fa-truck-fast mr-3 text-gold-400"></i>
+        <span class="text-sm font-medium">Free Shipping on Orders Over $100 | Order-on-Demand Available</span>
+        <button class="ml-6 text-gold-400 hover:text-gold-300 transition">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+<header id="header" class="bg-black/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center space-x-12">
+                <a href="#hero-section" class="font-display text-3xl font-bold text-whiskey-900 hover:text-whiskey-700 transition">
+                    <img src="https://whitelightningdistillery.com/wp-content/uploads/2019/11/wl-logo-1024x1006.png" width="150px;" height="150px;">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#hero-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#about-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    About Us
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#our-products-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Our Products
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#shop-category-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Shop
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#distillery-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Distillery
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#reviews-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Product Reviews
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#contact-section" class="text-white font-medium hover:text-whiskey-600 transition relative group">
+                    Contact Us
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-whiskey-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-6">
+                <button class="text-xl text-white hover:text-whiskey-600 transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="#shop-category-section" class="hidden md:block bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105 shadow-lg">
+                    Buy Now
+                </a>
+                <button class="text-xl text-white hover:text-whiskey-600 transition">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+                <button class="text-xl text-white hover:text-whiskey-600 transition relative">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-gold-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="hero-section" class="relative h-[700px] overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/cb523f47d1-df9784ce13c88abc627a.png" alt="Luxury distillery interior with copper pot stills, oak barrels, dramatic lighting, modern industrial aesthetic, cinematic photography, wide angle" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+    </div>
+    
+    <div class="relative h-full max-w-7xl mx-auto px-6 flex items-center">
+        <div class="max-w-3xl">
+            <div class="inline-block bg-gold-500/20 backdrop-blur-sm border border-gold-400/30 text-gold-300 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                <i class="fa-solid fa-award mr-2"></i>Award-Winning Craft Spirits Since 1975
+            </div>
+            <h1 class="font-display text-7xl font-bold text-white mb-6 leading-tight">
+                Crafted with <span class="text-gold-400">Passion</span><br/>
+                <span class="text-5xl">Perfected by Time</span>
+            </h1>
+            <p class="text-xl text-white/90 mb-10 leading-relaxed max-w-2xl">
+                Experience the finest handcrafted spirits from our award-winning distillery. Every bottle tells a story of tradition, innovation, and uncompromising quality.
+            </p>
+            <div class="flex items-center space-x-4">
+                <a href="#our-products-section" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-white px-10 py-5 rounded-full font-semibold text-lg transition transform hover:scale-105 shadow-2xl">
+                    <i class="fa-solid fa-shopping-cart mr-2"></i>Shop Collection
+                </a>
+                <a href="#about-section" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/50 px-10 py-5 rounded-full font-semibold text-lg transition">
+                    <i class="fa-solid fa-play mr-2"></i>Our Story
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-8 mt-12 max-w-2xl">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gold-400 mb-2">50+</div>
+                    <div class="text-sm text-white/70 font-medium">Years Legacy</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gold-400 mb-2">25+</div>
+                    <div class="text-sm text-white/70 font-medium">Awards Won</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gold-400 mb-2">100%</div>
+                    <div class="text-sm text-white/70 font-medium">Handcrafted</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <a href="#brands-section" class="text-white animate-bounce block">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
+        </a>
+    </div>
+</section>
+
+<section id="brands-section" class="py-16 bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+    <div class="max-w-7xl mx-auto px-6 mb-8">
+        <div class="text-center">
+            <h3 class="text-whiskey-900 font-semibold text-sm uppercase tracking-wider mb-2">Trusted By Premium </h3>
+        </div>
+    </div>
+    <div class="relative">
+        <div class="flex space-x-16 animate-scroll">
+            <div class="flex items-center space-x-16 min-w-max">
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/1-1.png" alt="Premium liquor store logo elegant typography black without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/2-1.png" alt="Upscale bar and grill logo modern design without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/3.png" alt="Fine dining restaurant logo sophisticated without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/4.png" alt="Luxury hotel chain logo elegant without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/5.png" alt="Premium wine and spirits distributor logo without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/6.png" alt="Exclusive members club logo refined without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/7.png" alt="Premium liquor store logo elegant typography black without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/8.png" alt="Upscale bar and grill logo modern design without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/9.png" alt="Fine dining restaurant logo sophisticated without background" />
+                <img class="h-20 w-auto object-contain opacity-100 hover:opacity-100 transition" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/10.png" alt="Luxury hotel chain logo elegant without background" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-section" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-8 -left-8 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl"></div>
+                <div class="relative grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img class="w-full h-64 object-cover rounded-2xl shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/336481890b-4628cb6622720bbc8afc.png" alt="Master distiller examining whiskey in glass, professional setting, warm lighting" />
+                        <img class="w-full h-48 object-cover rounded-2xl shadow-xl" src="https://whitelightningdistillery.com/wp-content/uploads/2019/12/wlightning-1024x768.jpg" alt="Traditional copper pot stills in distillery, industrial craftsmanship" />
+                    </div>
+                    <div class="space-y-4 mt-8">
+                        <img class="w-full h-48 object-cover rounded-2xl shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6700d9d9fa-fa7bb1685211ad8480de.png" alt="Oak barrels aging whiskey in cellar, rustic atmosphere" />
+                        <img class="w-full h-64 object-cover rounded-2xl shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/38b309ff7c-bf63f281d9063abe023b.png" alt="Distillery workers crafting spirits, authentic craftsmanship" />
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="inline-block bg-gold-100 text-gold-800 px-5 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-award mr-2"></i>Our Heritage
+                </div>
+                <h2 class="font-display text-5xl font-bold text-whiskey-900 mb-6">A Legacy of <span class="text-gold-600">Excellence</span></h2>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    For over three generations, White Lightning Distillery has been at the forefront of craft spirit production. Founded in 1975 by master distiller James Mitchell, our distillery combines time-honored traditions with innovative techniques to create spirits of exceptional quality.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    White Lightning Distillery is a craft distillery in Barrhead Alberta, specializing in small-batch spirits made from locally sourced liquor. We take pride in crafting premium vodka and gin, delivering smooth, authentic flavors. As a premium Alberta distillery, our passion for quality ensures every bottle reflects the rich taste of our region. Experience the finest small-batch spirits in Alberta, made with dedication and locally sourced ingredients.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-whiskey-50 to-whiskey-100 p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-whiskey-800 mb-2">50+</div>
+                        <div class="text-sm text-gray-600 font-medium">Years of Excellence</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gold-50 to-gold-100 p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-gold-800 mb-2">25+</div>
+                        <div class="text-sm text-gray-600 font-medium">International Awards</div>
+                    </div>
+                </div>
+                
+                <a href="#distillery-section" class="inline-block bg-whiskey-900 hover:bg-whiskey-800 text-white px-8 py-4 rounded-full font-semibold transition transform hover:scale-105 shadow-lg">
+                    <i class="fa-solid fa-building-columns mr-2"></i>Visit Our Distillery
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-products-section" class="py-24 bg-gradient-to-br from-whiskey-50 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-gold-100 text-gold-800 px-5 py-2 rounded-full text-sm font-semibold mb-4">
+                <i class="fa-solid fa-star mr-2"></i>Featured Collection
+            </div>
+            <h2 class="font-display text-5xl font-bold text-whiskey-900 mb-4">Our Premium Spirits</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover our signature collection, each bottle crafted with time-honored techniques and the finest ingredients</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div id="product-card-1" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/1-1.png" alt="Premium moonshine whiskey bottle elegant label clear glass professional product photography without background" />
+                    <div class="absolute top-4 right-4 bg-gold-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        BEST SELLER
+                    </div>
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Berry Blend Vodka</h3>
+                    <p class="text-gray-600 text-sm mb-4">Berry Blend Vodka Bursting with All-Natural Fruit Flavor</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$45.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-2" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/2-1.png" alt="Craft bourbon whiskey bottle amber color premium label professional product photography without background" />
+                    <div class="absolute top-4 right-4 bg-whiskey-800 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        LIMITED
+                    </div>
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Peach Vodka</h3>
+                    <p class="text-gray-600 text-sm mb-4">Peach vodka lovers, this one’s for you.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$45.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-3" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/9.png" alt="Premium vodka bottle crystal clear glass minimalist elegant label professional product photography without background" />
+                    <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        NEW
+                    </div>
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Triple White Gin</h3>
+                    <p class="text-gray-600 text-sm mb-4">Pure Excellence in Every Sip: Triple White Gin</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$50.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-4" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/11.png" alt="Spiced rum bottle dark glass vintage label professional product photography without background" />
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Barrel Aged Real Country Gin</h3>
+                    <p class="text-gray-600 text-sm mb-4">Discover the Rich Flavor of Barrel Aged Real Country Gin</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$55.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div id="product-card-5" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/12.png" alt="Premium gin bottle botanical design elegant label professional product photography without background" />
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Wild Man Whisky – Kirin’s Reserve</h3>
+                    <p class="text-gray-600 text-sm mb-4">Discover the Bold Flavor of Wild Man Whisky Kirin’s Reserve</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$150.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-6" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/4.png" alt="Rye whiskey bottle vintage design premium label professional product photography without background" />
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        EXCLUSIVE
+                    </div>
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Wild Man Whisky</h3>
+                    <p class="text-gray-600 text-sm mb-4">Discover the Bold Flavor of Wild Man Whisky</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$75.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-7" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/8.png" alt="Apple brandy bottle rustic elegant design professional product photography without background" />
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Real Country Gin</h3>
+                    <p class="text-gray-600 text-sm mb-4">Discover the Bold, Smooth Taste of Real Country Gin</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$50.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="product-card-8" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden bg-gradient-to-br from-whiskey-100 to-whiskey-50">
+                    <img class="w-full h-full object-contain group-hover:scale-110 transition duration-700 p-6" src="https://devshorifultechnosys.com/wp-content/uploads/2026/01/6.png" alt="Honey whiskey bottle golden design premium label professional product photography without background" />
+                    <button class="absolute bottom-4 right-4 bg-white text-whiskey-900 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition flex items-center justify-center hover:bg-gold-500 hover:text-white">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-whiskey-900 mb-2">Grandpa Beards Raspberry Apple Vodka</h3>
+                    <p class="text-gray-600 text-sm mb-4">A Taste of Tradition: Grandpa Beards Raspberry Apple Vodka</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-whiskey-700">$45.00</span>
+                        <button class="bg-whiskey-900 hover:bg-whiskey-800 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="#shop-category-section" class="inline-block bg-gradient-to-r from-whiskey-900 to-whiskey-800 hover:from-whiskey-800 hover:to-whiskey-700 text-white px-12 py-5 rounded-full font-semibold text-lg transition transform hover:scale-105 shadow-xl">
+                <i class="fa-solid fa-grid mr-2"></i>View All Products
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="shop-category-section" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-whiskey-100 text-whiskey-800 px-5 py-2 rounded-full text-sm font-semibold mb-4">
+                <i class="fa-solid fa-layer-group mr-2"></i>Shop by Category
+            </div>
+            <h2 class="font-display text-5xl font-bold text-whiskey-900 mb-4">Explore Our Collections</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">From classic moonshine to premium aged spirits and exclusive merchandise</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div id="category-1" class="relative h-96 rounded-3xl overflow-hidden group cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5d846d021c-4c1bb66fc8f5284ab4b2.png" alt="Collection of moonshine whiskey bottles on rustic wooden table, dramatic lighting, professional photography" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-whiskey-900/0 group-hover:bg-whiskey-900/20 transition duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-display text-3xl font-bold text-white">Moonshine</h3>
+                        <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm mb-2">12 Premium Products</p>
+                    <p class="text-white/70 text-sm">Traditional recipes, modern perfection</p>
+                </div>
+            </div>
+            
+            <div id="category-2" class="relative h-96 rounded-3xl overflow-hidden group cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/37bda8ab70-ab3508f49efc153ca62d.png" alt="Bourbon whiskey bottles with oak barrels in background, warm ambient lighting, professional photography" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-whiskey-900/0 group-hover:bg-whiskey-900/20 transition duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-display text-3xl font-bold text-white">Bourbon & Whiskey</h3>
+                        <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm mb-2">10 Aged Selections</p>
+                    <p class="text-white/70 text-sm">Rich, complex, unforgettable</p>
+                </div>
+            </div>
+            
+            <div id="category-3" class="relative h-96 rounded-3xl overflow-hidden group cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2f30ddc5a9-b5fe1795bae0f5afb2c0.png" alt="Premium vodka and gin bottles with ice and botanicals, elegant presentation, professional photography" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-whiskey-900/0 group-hover:bg-whiskey-900/20 transition duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-display text-3xl font-bold text-white">Vodka & Gin</h3>
+                        <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm mb-2">8 Crystal Clear Spirits</p>
+                    <p class="text-white/70 text-sm">Pure, smooth, exceptional</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div id="category-4" class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/cdc19af925-4c5de6382bbbefe4a469.png" alt="Specialty spirits rum brandy liqueur bottles elegant display, professional photography" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-whiskey-900/0 group-hover:bg-whiskey-900/20 transition duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-display text-3xl font-bold text-white">Specialty Spirits</h3>
+                        <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm mb-2">6 Unique Creations</p>
+                    <p class="text-white/70 text-sm">Innovative flavors, artisan quality</p>
+                </div>
+            </div>
+            
+            <div id="category-5" class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/95fc41151c-39ee35de2457b08a2388.png" alt="Distillery branded merchandise t-shirts glasses gift sets stylish display, professional photography" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-whiskey-900/0 group-hover:bg-whiskey-900/20 transition duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-display text-3xl font-bold text-white">Merchandise & Gifts</h3>
+                        <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm mb-2">15+ Exclusive Items</p>
+                    <p class="text-white/70 text-sm">Apparel, glassware, and more</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="distillery-section" class="py-24 bg-gradient-to-br from-whiskey-900 to-whiskey-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a4d77dd437-20b3f14b69180c9ccfac.png" alt="Copper stills pattern texture distillery equipment background" />
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-gold-500/20 backdrop-blur-sm border border-gold-400/30 text-gold-300 px-5 py-2 rounded-full text-sm font-semibold mb-4">
+                <i class="fa-solid fa-building-columns mr-2"></i>Experience Our Craft
+            </div>
+            <h2 class="font-display text-5xl font-bold mb-4">Visit Our Distillery</h2>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">Step into our world and witness the artistry behind every bottle. Experience guided tours, tastings, and the passion that drives our craft.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <img class="w-full h-[500px] object-cover rounded-3xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0faf27b1f2-28081e0a7800dcac25c9.png" alt="Interior of craft distillery with copper pot stills, oak barrels, workers, warm lighting, professional photography" />
+            </div>
+            
+            <div>
+                <h3 class="font-display text-3xl font-bold mb-6">The Art of Distillation</h3>
+                <p class="text-lg text-white/80 mb-6 leading-relaxed">
+                    Our state-of-the-art facility combines traditional copper pot stills with modern precision equipment. Every step of our process, from grain selection to bottling, is overseen by our master distillers who bring decades of expertise to their craft.
+                </p>
+                <p class="text-lg text-white/80 mb-8 leading-relaxed">
+                    We believe in transparency and education. Our distillery tours offer an intimate look at how we transform the finest ingredients into exceptional spirits, maintaining the highest standards of quality and craftsmanship.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <div class="text-4xl font-bold text-gold-400 mb-2">10,000+</div>
+                        <div class="text-sm text-white/70 font-medium">Annual Visitors</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <div class="text-4xl font-bold text-gold-400 mb-2">5★</div>
+                        <div class="text-sm text-white/70 font-medium">Average Rating</div>
+                    </div>
+                </div>
+                
+                <a href="#contact-section" class="inline-block bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-full font-semibold transition transform hover:scale-105 shadow-xl">
+                    <i class="fa-solid fa-calendar-check mr-2"></i>Book a Tour
+                </a>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition">
+                <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-users text-2xl text-white"></i>
+                </div>
+                <h4 class="font-display text-2xl font-bold mb-4">Guided Tours</h4>
+                <p class="text-white/70 mb-4">Expert-led tours through our facility, explaining each step of the distillation process</p>
+                <div class="text-gold-400 font-semibold">Duration: 60 minutes</div>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition">
+                <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-wine-glass text-2xl text-white"></i>
+                </div>
+                <h4 class="font-display text-2xl font-bold mb-4">Premium Tastings</h4>
+                <p class="text-white/70 mb-4">Sample our finest spirits with guidance from our expert tasting team</p>
+                <div class="text-gold-400 font-semibold">5-7 Spirit Selection</div>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition">
+                <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-gift text-2xl text-white"></i>
+                </div>
+                <h4 class="font-display text-2xl font-bold mb-4">Private Events</h4>
+                <p class="text-white/70 mb-4">Host your special occasions in our exclusive distillery event space</p>
+                <div class="text-gold-400 font-semibold">Up to 50 Guests</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="reviews-section" class="py-24 bg-gradient-to-br from-whiskey-50 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-gold-100 text-gold-800 px-5 py-2 rounded-full text-sm font-semibold mb-4">
+                <i class="fa-solid fa-star mr-2"></i>Customer Reviews
+            </div>
+            <h2 class="font-display text-5xl font-bold text-whiskey-900 mb-4">What Our Customers Say</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Hear from spirits enthusiasts who love our craft</p>
+            <div class="flex items-center justify-center mt-6 space-x-2">
+                <div class="flex text-gold-500 text-2xl">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-lg ml-3">4.9 out of 5 (2,847 reviews)</span>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div id="review-1" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-gold-500">
+                <div class="flex items-center mb-6">
+                    <img src="https://devshorifultechnosys.com/wp-content/uploads/2025/12/images.jpeg" alt="Customer" class="w-16 h-16 rounded-full mr-4 border-2 border-gold-400">
+                    <div>
+                        <h4 class="font-bold text-whiskey-900 text-lg">Michael Anderson</h4>
+                        <div class="flex text-gold-500 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-500 text-xs mt-1">Verified Purchase</p>
+                    </div>
+                </div>
+                <h5 class="font-bold text-whiskey-900 mb-3">Absolutely Incredible!</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">"The Original Moonshine is absolutely incredible. Smooth, flavorful, and authentic. Best I've ever tasted! The quality is unmatched and the packaging is beautiful."</p>
+                <div class="text-sm text-gray-500">Original Moonshine • 2 weeks ago</div>
+            </div>
+            
+            <div id="review-2" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-gold-500">
+                <div class="flex items-center mb-6">
+                    <img src="https://devshorifultechnosys.com/wp-content/uploads/2025/12/Woman-1.jpeg" alt="Customer" class="w-16 h-16 rounded-full mr-4 border-2 border-gold-400">
+                    <div>
+                        <h4 class="font-bold text-whiskey-900 text-lg">Sarah Thompson</h4>
+                        <div class="flex text-gold-500 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-500 text-xs mt-1">Verified Purchase</p>
+                    </div>
+                </div>
+                <h5 class="font-bold text-whiskey-900 mb-3">Exceptional Quality</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">"Fast shipping, beautiful packaging, and exceptional quality. The bourbon is rich and complex with amazing depth. Highly recommend to any whiskey enthusiast!"</p>
+                <div class="text-sm text-gray-500">Barrel Aged Bourbon • 1 month ago</div>
+            </div>
+            
+            <div id="review-3" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-gold-500">
+                <div class="flex items-center mb-6">
+                    <img src="https://devshorifultechnosys.com/wp-content/uploads/2025/12/man-2.jpeg" alt="Customer" class="w-16 h-16 rounded-full mr-4 border-2 border-gold-400">
+                    <div>
+                        <h4 class="font-bold text-whiskey-900 text-lg">David Martinez</h4>
+                        <div class="flex text-gold-500 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-500 text-xs mt-1">Verified Purchase</p>
+                    </div>
+                </div>
+                <h5 class="font-bold text-whiskey-900 mb-3">Outstanding Craftsmanship</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">"Outstanding craftsmanship! You can taste the quality in every sip. This is the real deal! The distillery tour was amazing too."</p>
+                <div class="text-sm text-gray-500">Crystal Vodka • 3 weeks ago</div>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div id="review-4" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-whiskey-600">
+                <div class="flex items-center mb-6">
+                    <img src="https://devshorifultechnosys.com/wp-content/uploads/2025/12/Woman-4.jpeg" alt="Customer" class="w-16 h-16 rounded-full mr-4 border-2 border-gold-400">
+                    <div>
+                        <h4 class="font-bold text-whiskey-900 text-lg">Emily Rodriguez</h4>
+                        <div class="flex text-gold-500 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-500 text-xs mt-1">Verified Purchase</p>
+                    </div>
+                </div>
+                <h5 class="font-bold text-whiskey-900 mb-3">Perfect Gift Choice</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">"Bought this as a gift for my father and he absolutely loved it! The presentation is stunning and the taste is phenomenal. Will definitely be ordering more for future occasions."</p>
+                <div class="text-sm text-gray-500">Reserve Rye • 1 week ago</div>
+            </div>
+            
+            <div id="review-5" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border-t-4 border-whiskey-600">
+                <div class="flex items-center mb-6">
+                    <img src="https://devshorifultechnosys.com/wp-content/uploads/2025/12/Man-3.jpeg" alt="Customer" class="w-16 h-16 rounded-full mr-4 border-2 border-gold-400">
+                    <div>
+                        <h4 class="font-bold text-whiskey-900 text-lg">James Wilson</h4>
+                        <div class="flex text-gold-500 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-500 text-xs mt-1">Verified Purchase</p>
+                    </div>
+                </div>
+                <h5 class="font-bold text-whiskey-900 mb-3">Best Distillery Tour Ever</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">"The distillery tour was incredible! Our guide was knowledgeable and passionate. The tasting session was the highlight. Left with 3 bottles and can't wait to come back!"</p>
+                <div class="text-sm text-gray-500">Distillery Tour • 4 days ago</div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="bg-transparent border-2 border-whiskey-900 text-whiskey-900 hover:bg-whiskey-900 hover:text-white px-10 py-4 rounded-full font-semibold text-lg transition">
+                <i class="fa-solid fa-comment-dots mr-2"></i>Read More Reviews
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="contact-section" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <div class="inline-block bg-whiskey-100 text-whiskey-800 px-5 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-envelope mr-2"></i>Get in Touch
+                </div>
+                <h2 class="font-display text-5xl font-bold text-whiskey-900 mb-6">Contact Us</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    Have questions about our products, tours, or want to place a custom order? Our team is here to help. Reach out and we'll get back to you within 24 hours.
+                </p>
+                
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-whiskey-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-location-dot text-whiskey-900 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-whiskey-900 mb-1">Visit Us</h4>
+                            <p class="text-gray-600">123 Distillery Lane<br/>Bourbon County, KY 40456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-whiskey-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-phone text-whiskey-900 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-whiskey-900 mb-1">Call Us</h4>
+                            <p class="text-gray-600">+1 (555) 123-4567<br/>Mon-Fri: 9AM - 6PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-whiskey-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-whiskey-900 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-whiskey-900 mb-1">Email Us</h4>
+                            <p class="text-gray-600">info@whitelightning.com<br/>support@whitelightning.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-whiskey-50 to-whiskey-100 rounded-2xl p-8">
+                    <h4 class="font-display text-2xl font-bold text-whiskey-900 mb-4">Opening Hours</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-700 font-medium">Monday - Friday</span>
+                            <span class="text-whiskey-900 font-bold">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-700 font-medium">Saturday</span>
+                            <span class="text-whiskey-900 font-bold">10:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-700 font-medium">Sunday</span>
+                            <span class="text-whiskey-900 font-bold">12:00 PM - 4:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-whiskey-50 to-white rounded-3xl p-10 shadow-xl">
+                <h3 class="font-display text-3xl font-bold text-whiskey-900 mb-8">Send Us a Message</h3>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-whiskey-900 mb-2">First Name</label>
+                            <input type="text" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-whiskey-900 mb-2">Last Name</label>
+                            <input type="text" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition" placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-whiskey-900 mb-2">Email Address</label>
+                        <input type="email" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition" placeholder="john@example.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-whiskey-900 mb-2">Phone Number</label>
+                        <input type="tel" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition" placeholder="+1 (555) 000-0000">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-whiskey-900 mb-2">Subject</label>
+                        <select class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition">
+                            <option>General Inquiry</option>
+                            <option>Product Question</option>
+                            <option>Distillery Tour</option>
+                            <option>Custom Order</option>
+                            <option>Partnership</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-whiskey-900 mb-2">Message</label>
+                        <textarea rows="5" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-whiskey-600 focus:outline-none transition resize-none" placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-whiskey-900 to-whiskey-800 hover:from-whiskey-800 hover:to-whiskey-700 text-white px-8 py-5 rounded-xl font-semibold text-lg transition transform hover:scale-105 shadow-xl">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class="py-20 bg-whiskey-900 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="w-20 h-20 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-envelope text-3xl text-white"></i>
+        </div>
+        <h2 class="font-display text-4xl font-bold mb-4">Join Our Community</h2>
+        <p class="text-xl text-white/80 mb-8">Subscribe to receive exclusive offers, new product launches, and distillery updates</p>
+        <div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+            <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 rounded-full text-whiskey-900 focus:outline-none focus:ring-4 focus:ring-gold-500">
+            <button class="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-full font-semibold transition transform hover:scale-105 whitespace-nowrap">
+                Subscribe Now
+            </button>
+        </div>
+        <p class="text-white/60 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+</section>
+
+<footer id="footer" class="bg-black text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-5 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <div class="font-display text-4xl font-bold mb-6">
+                    <img src="https://whitelightningdistillery.com/wp-content/uploads/2019/11/wl-logo-1024x1006.png" width="150px;" height="150px;">
+                    <span class="text-gold-400">White</span> Lightning
+                </div>
+                <p class="text-white/70 mb-8 leading-relaxed text-lg">
+                    Crafting exceptional spirits since 1975. Quality, tradition, and passion in every bottle. Experience the art of distillation.
+                </p>
+                <div class="flex space-x-4 mb-8">
+                    <a href="#" class="w-12 h-12 bg-white/10 hover:bg-gold-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i class="fa-brands fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/10 hover:bg-gold-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/10 hover:bg-gold-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i class="fa-brands fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/10 hover:bg-gold-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/10 hover:bg-gold-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                        <i class="fa-brands fa-pinterest text-lg"></i>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3 text-white/70">
+                    <i class="fa-solid fa-phone text-gold-400"></i>
+                    <span class="text-lg">+1 (555) 123-4567</span>
+                </div>
+                <div class="flex items-center space-x-3 text-white/70 mt-3">
+                    <i class="fa-solid fa-envelope text-gold-400"></i>
+                    <span class="text-lg">info@whitelightning.com</span>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="font-display text-xl font-bold mb-6 text-gold-400">Shop</h3>
+                <ul class="space-y-4">
+                    <li><a href="#our-products-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">All Products</a></li>
+                    <li><a href="#shop-category-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Moonshine Collection</a></li>
+                    <li><a href="#shop-category-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Bourbon Selection</a></li>
+                    <li><a href="#shop-category-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Premium Vodka</a></li>
+                    <li><a href="#shop-category-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Gift Sets</a></li>
+                    <li><a href="#shop-category-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Merchandise</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-display text-xl font-bold mb-6 text-gold-400">Company</h3>
+                <ul class="space-y-4">
+                    <li><a href="#about-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Our Story</a></li>
+                    <li><a href="#distillery-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Distillery Tours</a></li>
+                    <li><a href="#contact-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Visit Us</a></li>
+                    <li><a href="#reviews-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Awards & Press</a></li>
+                    <li><a href="#contact-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Careers</a></li>
+                    <li><a href="#contact-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="font-display text-xl font-bold mb-6 text-gold-400">Help</h3>
+                <ul class="space-y-4">
+                    <li><a href="#contact-section" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Customer Support</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Shipping Information</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Returns & Refunds</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Order Tracking</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">FAQ</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">Size Guide</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bg-white/5 rounded-2xl p-8 mb-12">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h4 class="font-display text-2xl font-bold mb-2">Stay Updated</h4>
+                    <p class="text-white/70">Subscribe for exclusive offers and updates</p>
+                </div>
+                <div class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-4 rounded-l-full bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold-400 flex-1 md:w-80">
+                    <button class="bg-gold-500 hover:bg-gold-600 px-8 py-4 rounded-r-full font-semibold transition-all duration-300 whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-white/10 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mb-8">
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <p class="text-white/60 text-sm">&copy; 2026 White Lightning Distillery. All rights reserved.</p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-white/60 hover:text-gold-400 transition">Privacy Policy</a>
+                        <a href="#" class="text-white/60 hover:text-gold-400 transition">Terms of Service</a>
+                        <a href="#" class="text-white/60 hover:text-gold-400 transition">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-white/60 text-sm mr-2">We Accept:</span>
+                    <i class="fa-brands fa-cc-visa text-3xl text-white/70 hover:text-white transition"></i>
+                    <i class="fa-brands fa-cc-mastercard text-3xl text-white/70 hover:text-white transition"></i>
+                    <i class="fa-brands fa-cc-amex text-3xl text-white/70 hover:text-white transition"></i>
+                    <i class="fa-brands fa-cc-paypal text-3xl text-white/70 hover:text-white transition"></i>
+                    <i class="fa-brands fa-cc-discover text-3xl text-white/70 hover:text-white transition"></i>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 bg-white/5 rounded-xl p-6">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-lock text-green-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold text-sm">Secure Payments</h5>
+                        <p class="text-white/60 text-xs">256-bit SSL Encryption</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold text-sm">PCI DSS Compliant</h5>
+                        <p class="text-white/60 text-xs">Payment Card Industry Certified</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-credit-card text-purple-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-white font-bold text-sm">Multiple Payment Options</h5>
+                        <p class="text-white/60 text-xs">Credit, Debit & Digital Wallets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-white/40 text-xs">
+                <i class="fa-solid fa-triangle-exclamation mr-2"></i>
+                Please drink responsibly. Must be 21+ to purchase. Available in select states only.
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
